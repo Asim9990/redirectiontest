@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		}
 		
 		// redirect if linkr.bio is the referer
-	if (referringURL === 'https://api.linkr.bio/callbacks/') {
+	if (referringURL?.includes ('https://api.linkr.bio/callbacks/') {
 		return {
 			redirect: {
 				permanent: false,
